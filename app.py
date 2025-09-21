@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from EorzeaEnv import EorzeaEnv
+from EorzeaEnv.env import EorzeaEnv
 from datetime import datetime, timedelta, timezone
 
 app = Flask(__name__)
