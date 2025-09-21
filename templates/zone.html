@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>{{ area }} の対象天候予報</h2>
+  {% if weather_list %}
+  <table border="1" cellspacing="0" cellpadding="4">
+    <tr><th>時間</th><th>天候</th></tr>
+    {% for w in weather_list %}
+    <tr>
+      <td>{{ w.time }}</td>
+      <td>{{ w.weather }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+    <p>指定された天候は過去2時間〜未来24時間の範囲にありません。</p>
+  {% endif %}
+{% endblock %}

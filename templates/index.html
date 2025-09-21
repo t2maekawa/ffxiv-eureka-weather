@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>エリアを選んでください</h2>
+  <ul>
+    {% for key, info in areas.items() %}
+      <li><a href="/{{ key }}">{{ info.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
