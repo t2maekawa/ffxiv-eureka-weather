@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ area }}の天候一覧</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>{{ area }}の天候一覧</h1>
+    <table border="1">
+        <tr><th>時間（JST）</th><th>天候</th></tr>
+        {% for w in weathers %}
+        <tr>
+            <td>{{ w.time }}</td>
+            <td>{{ w.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
