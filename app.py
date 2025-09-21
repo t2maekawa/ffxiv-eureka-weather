@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from eorzeaenv import EorzeaEnv
+from EorzeaEnv import EorzeaEnv
 from datetime import datetime, timedelta, timezone
 
 app = Flask(__name__)
@@ -31,7 +31,7 @@ def show_area(area):
     start_time = now_utc - timedelta(hours=2)
     end_time = now_utc + timedelta(hours=24)
 
-    # eorzeaenv の天候取得
+    # EorzeaEnv の天候取得
     weathers = ee.weathers_between(start_time, end_time, area=area)
 
     # JST 表示用に変換
